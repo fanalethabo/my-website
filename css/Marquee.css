@@ -1,0 +1,38 @@
+.Events {
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    display: flex; /* Uses flexbox for layout */
+    justify-content: center; /* Centers content horizontally */
+    align-items: right; /* Centers content vertically */
+    height: 50vh; /* Sets height to 100% of the viewport height */
+    background-color: #f0f0f0; /* Sets a light gray background color */
+}
+
+.marquee {
+    width: 87%; /* Sets the width of the marquee to 80% of the parent container */
+    overflow: visible; /* Hides overflow content, essential for the marquee effect */
+    background-color: #fff; /* Sets a white background color */
+    border: 1px solid #ccc; /* Adds a light gray border */
+    padding: 30px; /* Adds padding inside the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a 3D effect */
+}
+
+.marquee-content {
+    display: flex; /* Uses flexbox to arrange images in a row */
+    animation: marquee 25s linear infinite; /* Applies the marquee animation with a duration of 10 seconds, linear timing, and infinite repetition */
+}
+
+.marquee-content img {
+    width: 600px; /* Sets a fixed width for each image */
+    height: auto; /* Maintains the aspect ratio of images */
+    margin-right: 50px; /* Adds space between images */
+}
+
+@keyframes marquee {
+    70% {
+        transform: translateX(80%); /* Starts with the content off the right edge */
+    }
+    70% {
+        transform: translateX(-20%); /* Ends with the content off the left edge */
+    }
+}
